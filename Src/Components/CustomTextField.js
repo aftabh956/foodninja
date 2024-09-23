@@ -16,30 +16,36 @@ const CustomTextField = ({
   icon_Type,
   style,
   righticon_Type,
-  righticonName
+  righticonName,
 }) => {
   return (
-    <View style={[isIconImage ? styles.icon_Style : styles.form , style && style]}>
+    <View style={[styles.form, style && style]}>
       {isIconImage && (
         <Icon
           style={{color: colors.primary}}
-          size={moderateScale(20,0.6)}
+          size={moderateScale(20, 0.6)}
           name={iconName}
           as={icon_Type ? icon_Type : FontAwesome5}
         />
       )}
       <TextInput
         secureTextEntry={show_Password}
-        style={[styles.input_Style, input_Style]}
+        style={[styles.input_Style, input_Style,]}
         placeholderTextColor={'grey'}
         placeholder={placeholder}
       />
       {isRight_icon && (
         <Icon
-          style={{color: show_Password ? 'grey' : colors.primary }}
+          style={{
+            color: show_Password ? 'grey' : colors.primary,
+            // backgroundColor: 'red',
+            position: 'absolute',
+            right: 15,
+            zIndex: 1,
+          }}
           size={18}
           name={'eye'}
-          as={Feather} 
+          as={Feather}
         />
       )}
     </View>
@@ -54,24 +60,13 @@ const styles = StyleSheet.create({
     height: moderateScale(50, 0.6),
     backgroundColor: '#242322',
     alignSelf: 'center',
+    alignItems: 'center',
     borderRadius: moderateScale(15, 0.6),
     flexDirection: 'row',
     paddingLeft: moderateScale(20, 0.6),
-    marginVertical:moderateScale(10,0.6)
-    
+    marginVertical: moderateScale(10, 0.6),
   },
 
-  icon_Style: {
-    width: windowwidth * 0.89,
-    height: moderateScale(50, 0.6),
-    backgroundColor: '#242322',
-    alignSelf: 'center',
-    borderRadius: moderateScale(15, 0.6),
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: moderateScale(25, 0.6),
-    marginVertical:moderateScale(6,0.6)
-  },
   input_Style: {
     width: windowwidth * 0.63,
     // backgroundColor:'green'

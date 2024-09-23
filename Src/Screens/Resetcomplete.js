@@ -1,13 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import ImageContainer from '../Components/ImageContainer'
 import { moderateScale } from 'react-native-size-matters'
+import ImageContainer from '../Components/ImageContainer'
 import { Image } from 'native-base'
-import { colors, windowheight, windowwidth } from '../Utils/theme'
+import { colors, windowheight } from '../Utils/theme'
 import CustomButton from '../Components/CustomButton'
-import { position } from 'native-base/lib/typescript/theme/styled-system'
 
-const Signupcomplete = ({navigation}) => {
+const Resetcomplete = ({navigation}) => {
   return (
     <ImageContainer>
         <View style={styles.main_View}>
@@ -21,28 +20,28 @@ const Signupcomplete = ({navigation}) => {
         </View>
         <Text style={{fontSize:moderateScale(23,0.6),
             color:colors.white,fontWeight:'500',marginTop:moderateScale(10,0.6)
-        }}>Your Profile Is Ready To Use</Text>
+        }}>Password reset succesful</Text>
         <View style={{height:windowheight *0.35}}>
             <CustomButton onPress={()=>{
-            navigation.navigate('Homescreen')
-            }} style={{position:'absolute',bottom:0}} buttontext={'Try Order'}/>
+            navigation.navigate('Loginscreen')
+            }} style={{position:'absolute',bottom:0}} buttontext={'Back'}/>
         </View>
         </View>
     </ImageContainer>
   )
 }
 
-export default Signupcomplete
+export default Resetcomplete
 
 const styles = StyleSheet.create({
-    main_View:{
-        paddingHorizontal:moderateScale(15,0.6),
-        alignItems:'center'
-    },
-    image:{
-       marginTop:moderateScale(180,0.6),
-   },
-   congrats_Text:{
-    marginTop:moderateScale(20,0.6)
-   }
+  main_View:{
+    paddingHorizontal:moderateScale(15,0.6),
+    alignItems:'center'
+},
+image:{
+   marginTop:moderateScale(180,0.6),
+},
+congrats_Text:{
+marginTop:moderateScale(20,0.6)
+}
 })

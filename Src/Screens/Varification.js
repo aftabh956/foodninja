@@ -2,10 +2,11 @@ import { Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'r
 import React, { useState } from 'react'
 import ImageContainer from '../Components/ImageContainer'
 import { moderateScale } from 'react-native-size-matters'
-import { colors, windowwidth } from '../Utils/theme'
+import { colors, windowheight, windowwidth } from '../Utils/theme'
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { color } from 'native-base/lib/typescript/theme/styled-system'
+import { color, position } from 'native-base/lib/typescript/theme/styled-system'
 import { CodeField, Cursor, useBlurOnFulfill, useClearByFocusCell } from 'react-native-confirmation-code-field'
+import CustomButton from '../Components/CustomButton'
 
   
 
@@ -75,6 +76,13 @@ const Varification = ({navigation}) => {
         
         />
         </View>
+        <View style={{height:windowheight *0.51}}>
+        <CustomButton onPress={()=>{
+          navigation.navigate('Setpassword')
+        }} style={{position:'absolute',
+          bottom:0
+        }} buttontext={'Next'}/>
+        </View>
     </View>
     </ImageContainer>
   )
@@ -108,11 +116,12 @@ const styles = StyleSheet.create({
        marginTop:moderateScale(30,0.6)
       },
       cell:{
-        width:windowwidth *0.23,
+        width:windowwidth *0.21,
         height:moderateScale(75,0.6),
         backgroundColor:'#242322',
         fontSize:moderateScale(28,0.6),
         borderWidth:1,
+        // borderRadius:moderateScale(10,0.6),
         borderColor:'#242322',
         color:colors.white,
         textAlign:'center',

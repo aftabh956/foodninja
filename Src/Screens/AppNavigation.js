@@ -16,6 +16,11 @@ import Photopreview from './Photopreview';
 import Location from './Location';
 import Signupcomplete from './Signupcomplete';
 import Varification from './Varification';
+import Viamethod from './Viamethod';
+import Setpassword from './Setpassword';
+import Resetpassword from './Resetcomplete';
+import Resetcomplete from './Resetcomplete';
+import Homescreen from './Homescreen';
 
 const Stack = createNativeStackNavigator();
 const AppNavigation = () => {
@@ -35,7 +40,11 @@ const AppNavigation = () => {
         <Stack.Screen name='Photopreview' component={Photopreview}/>
         <Stack.Screen name='Location' component={Location}/>
         <Stack.Screen name='Signupcomplete' component={Signupcomplete}/>
+        <Stack.Screen name='Viamethod' component={Viamethod}/>
         <Stack.Screen name='Varification' component={Varification}/>
+        <Stack.Screen name='Setpassword' component={Setpassword}/>
+        <Stack.Screen name='Resetcomplete' component={Resetcomplete}/>
+        <Stack.Screen name='Homescreen' component={Homescreen}/>
         {/* <Stack.Screen name='CustomTextField' component={CustomTextField}/> */}
       </Stack.Navigator>
     </NavigationContainer>

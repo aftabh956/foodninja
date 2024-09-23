@@ -77,7 +77,9 @@ const Loginscreen = ({navigation}) => {
           }}
         />
       </View>
-      <TouchableOpacity style={{alignSelf:'center',borderBottomWidth:1,
+      <TouchableOpacity onPress={()=>{
+        navigation.navigate('Viamethod')
+      }} style={{alignSelf:'center',borderBottomWidth:1,
         borderBottomColor: colors.primary
       }}>
         <Text style={{fontSize:moderateScale(12,0.6),
@@ -86,7 +88,7 @@ const Loginscreen = ({navigation}) => {
       </TouchableOpacity>
       <View style={{marginTop:moderateScale(35,0.6)}}>
       <CustomButton onPress={()=>{
-        navigation.navigate('SigninScreen')
+        navigation.navigate('Homescreen')
       }}
        buttontext={'Login'}/>
       </View>
