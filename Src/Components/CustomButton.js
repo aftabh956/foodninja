@@ -4,7 +4,7 @@ import {colors, Colors, windowheight, windowwidth} from '../Utils/theme';
 import {moderateScale} from 'react-native-size-matters';
 
 const CustomButton = ({onPress, buttontext, style, isRowBtn, iconName, imageStyle,imageIcon,
-  isSvgbutton
+  isSvgbutton,buttontext_Style
 }) => {
   return (
     <TouchableOpacity
@@ -12,12 +12,12 @@ const CustomButton = ({onPress, buttontext, style, isRowBtn, iconName, imageStyl
       style={[isRowBtn ? styles.row_btn : styles.btn_view, style]}>
       {isRowBtn && <Image style={[{width: 40, height: 40, marginRight:moderateScale(20,0.6)}, imageStyle]} source={iconName} />}
       {isSvgbutton ? <Image source={imageIcon} /> : <Text
-        style={{
+        style={[{
           color: 'white',
           fontSize: moderateScale(16, 0.3),
           fontWeight: '400',
           fontWeight:'bold'
-        }}>
+        }, buttontext_Style]}>
         {buttontext}
       </Text> }
       

@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import { color } from 'native-base/lib/typescript/theme/styled-system';
 import { Image } from 'native-base';
 
-const Header = ({style,isRighticon}) => {
+const Header = ({style,isRighticon,onPressItem,onPressNotification}) => {
   return (
     
       <View style={styles.main_View}>
@@ -19,7 +19,7 @@ const Header = ({style,isRighticon}) => {
             fontWeight:'bold',lineHeight:42
           }}>Find Your Favorite Food</Text>
         </View>
-        <TouchableOpacity style={styles.notification_Icon}>
+        <TouchableOpacity onPress={onPressNotification} style={styles.notification_Icon}>
          <MaterialIcons style={{color:colors.primary}} size={24} name={'notifications'}/>
         </TouchableOpacity>
         </View>
@@ -32,7 +32,7 @@ const Header = ({style,isRighticon}) => {
             
         </View>
         { ! isRighticon && 
-            <TouchableOpacity style={styles.filter_Box}>
+            <TouchableOpacity onPress={onPressItem} style={styles.filter_Box}>
         <Image source={require('../Assets/Images/Filter.png')}/>
         </TouchableOpacity>}
         </View>
@@ -58,9 +58,10 @@ const styles = StyleSheet.create({
          backgroundColor: colors.lightgrey,
          alignItems:'center',
          justifyContent:'center',
+         marginLeft:moderateScale(10,0.6)
          },
          search_Box:{
-            width:windowwidth *0.69,
+            width:windowwidth *0.71,
             height:moderateScale(46,0.6),
             backgroundColor:colors.lightgrey,
             borderRadius:moderateScale(15,0.6),

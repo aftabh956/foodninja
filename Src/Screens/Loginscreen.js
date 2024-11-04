@@ -88,7 +88,7 @@ const Loginscreen = ({navigation}) => {
       </TouchableOpacity>
       <View style={{marginTop:moderateScale(35,0.6)}}>
       <CustomButton onPress={()=>{
-        navigation.navigate('Homescreen')
+        navigation.navigate('Tabnavigation')
       }}
        buttontext={'Login'}/>
       </View>

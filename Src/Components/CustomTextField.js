@@ -30,7 +30,7 @@ const CustomTextField = ({
       )}
       <TextInput
         secureTextEntry={show_Password}
-        style={[styles.input_Style, input_Style,]}
+        style={[styles.input_Style, input_Style]}
         placeholderTextColor={'grey'}
         placeholder={placeholder}
       />

@@ -29,7 +29,7 @@ const OnBoarding = ({navigation}) => {
           width: windowwidth,
           alignItems: 'center',
           justifyContent: 'center',
-        //   alignSelf: 'center',
+          // alignSelf: 'center',
           left: moderateScale(10, 0.6),
         }}>
         <View

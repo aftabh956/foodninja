@@ -3,11 +3,14 @@ import React from 'react';
 import { NativeBaseProvider } from 'native-base';
 
 import AppNavigation from './Src/Screens/AppNavigation';
+import Chatdetails from './Src/Screens/Chatdetails';
 
 const App = () => {
   return (
   <NativeBaseProvider>
-  <AppNavigation />
+  {/* <AppNavigation /> */}
+  
+   <Chatdetails/>
   </NativeBaseProvider>
 )
 }
