@@ -47,55 +47,66 @@ import Confirmorder from './Confirmorder';
 import Editlocation from './Editlocation';
 import Editpayment from './Editpayment';
 
+import Practicechat from './Practicechat';
+import Home from './Home';
+import Overview from './Overview';
+import Filter from './Filter';
+
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 const AppNavigation = () => {
-  const obj = {
-    id: 'name',
-    name: 'Shehriyar',
-  };
-  const obj2 = {
-    ...obj,
-    icon: 'home',
-  };
-  console.log(obj2, '=================<');
+  // const obj = {
+  //   id: 'name',
+  //   name: 'Shehriyar',
+  // };
+  // const obj2 = {
+  //   ...obj,
+  //   icon: 'home',
+  // };
+  // console.log(obj2, '=================<');
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+      initialRouteName='Home'
+        // initialRouteName="Home"
         screenOptions={{headerShown: false}}>
+          <Stack.Screen name='Home' component={Home}/>
+          <Stack.Screen name='Overview' component={Overview}/>
+          <Stack.Screen name='Filter' component={Filter}/>
+        {/* <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Onboarding1" component={Onboarding1} />
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
         <Stack.Screen name="SigninScreen" component={SigninScreen} />
         <Stack.Screen name="Loginscreen" component={Loginscreen} />
         <Stack.Screen name="SignupProcess" component={SignupProcess} />
-        <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
-        <Stack.Screen name="UploadPhoto" component={UploadPhoto} />
+        <Stack.Screen name="PaymentScreen" component={PaymentScreen} /> */}
+        {/* <Stack.Screen name="UploadPhoto" component={UploadPhoto} />
         <Stack.Screen name="Photopreview" component={Photopreview} />
         <Stack.Screen name="Location" component={Location} />
         <Stack.Screen name="Signupcomplete" component={Signupcomplete} />
         <Stack.Screen name="Viamethod" component={Viamethod} />
         <Stack.Screen name="Varification" component={Varification} />
         <Stack.Screen name="Setpassword" component={Setpassword} />
-        <Stack.Screen name="Resetcomplete" component={Resetcomplete} />
-        <Stack.Screen name="Tabnavigation" component={Tabnavigation} />
+        <Stack.Screen name="Resetcomplete" component={Resetcomplete} /> */}
+        {/* <Stack.Screen name="Tabnavigation" component={Tabnavigation} />
         <Stack.Screen name="NearestRestaurant" component={Nearestrestaurant} />
         <Stack.Screen name="PopularMenu" component={PopularMenu} />
         <Stack.Screen name="DetailProduct" component={DetailProduct} />
         <Stack.Screen name="DetailMenu" component={DetailMenu} />
         <Stack.Screen name="Filterscreen" component={Filterscreen} />
-        {/* <Stack.Screen name="Homescreen" component={Homescreen} /> */}
-        <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
-        <Stack.Screen name="VoucherPromo" component={VoucherPromo} />
-        <Stack.Screen name="Chatdetails" component={Chatdetails} />
-        <Stack.Screen name="callringing" component={Callringing} />
-        <Stack.Screen name="Finishorder" component={Finishorder} />
-        <Stack.Screen name="Orderdetails" component={Orderdetails} />
-        <Stack.Screen name="Confirmorder" component={Confirmorder} />
-        <Stack.Screen name="Editlocation" component={Editlocation} />
-        <Stack.Screen name="Editpayment" component={Editpayment} />
+        <Stack.Screen name="Homescreen" component={Homescreen} /> 
+         <Stack.Screen name="NotificationScreen" component={NotificationScreen} /> */}
+         {/* <Stack.Screen name="VoucherPromo" component={VoucherPromo} />
+         <Stack.Screen name="Chatdetails" component={Chatdetails} />
+         <Stack.Screen name="callringing" component={Callringing} />
+         <Stack.Screen name="Finishorder" component={Finishorder} />
+         <Stack.Screen name="Orderdetails" component={Orderdetails} />
+         <Stack.Screen name="Confirmorder" component={Confirmorder} />
+         <Stack.Screen name="Editlocation" component={Editlocation} />
+         <Stack.Screen name="Editpayment" component={Editpayment} />
+         <Stack.Screen name="Practicechat" component={Practicechat} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

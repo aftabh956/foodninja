@@ -4,13 +4,19 @@ import { NativeBaseProvider } from 'native-base';
 
 import AppNavigation from './Src/Screens/AppNavigation';
 import Chatdetails from './Src/Screens/Chatdetails';
+import Practicechat from './Src/Screens/Practicechat';
+import Varification from './Src/Screens/Varification';
+import Home from './Src/Screens/Home';
 
 const App = () => {
   return (
   <NativeBaseProvider>
-  {/* <AppNavigation /> */}
+  <AppNavigation />
   
-   <Chatdetails/>
+   {/* <Chatdetails/> */}
+   {/* <Practicechat/> */}
+   {/* <Varification/> */}
+  {/* <Home/> */}
   </NativeBaseProvider>
 )
 }

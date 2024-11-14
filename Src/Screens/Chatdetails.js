@@ -27,8 +27,6 @@ import {Icon} from 'native-base';
 
 const Chatdetails = ({navigation}) => {
   const [messages, setMessages] = useState([]);
-  const [value, setValue] = useState('');
-  // console.log('aftab',value)
   useEffect(() => {
     setMessages([
       {
@@ -55,7 +53,6 @@ const Chatdetails = ({navigation}) => {
   }, []);
 
   const onSend = useCallback((messages = []) => {
-    console.log('pressed', messages);
     setMessages(previousMessages =>
       GiftedChat.append(previousMessages, messages),
     );
@@ -185,7 +182,7 @@ const Chatdetails = ({navigation}) => {
         isTyping={false}
         onSend={text => onSend(text)}
         alignTop={true}
-        key={item => item?.id}
+        // key={item => item?.id}
         user={{
           _id: 2,
           name: 'React Native',
